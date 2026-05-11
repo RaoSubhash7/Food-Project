@@ -20,7 +20,7 @@ html{
 
 header{
     background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-    url("img/header.jpg");
+    url("/resources/css/img/header.jpg");
 
     height: 100vh;
     background-size: cover;
@@ -47,14 +47,19 @@ header{
    left: 50%;
    transform: translate(-50%,-50%);
 }
-.btn{
-    display: inline;
+.btn:link,
+.btn:visited{
+    display: inline-block;
     padding: 10px 30px;
     text-decoration: none;
     font-weight: 300;
-     border-radius: 200px;
+    border-radius: 200px;
+    transition: 0.3s;
+    border-bottom: none;
 }
-.btn-first{
+
+.btn-first:link,
+.btn-first:visited{
     background-color: #e67e22;
     color: #fff;
     border: 1px solid #e67e22;
@@ -65,7 +70,8 @@ header{
     color: black;
 }
 
-.btn-second{
+.btn-second:link,
+.btn-second:visited{
     color: #fff;
     border: 1px solid #e67e22;
     margin-right: 25px;
@@ -80,8 +86,6 @@ header{
     float: left;
     margin-top: 10px;
     border-radius: 50%;
-    size: 20;
-
 }
 .main-nav{
      list-style: none;
@@ -89,7 +93,7 @@ header{
      display: flex;
      justify-content: flex-end;
      gap: 20px;
-     margin-top: 20PX;
+     margin-top: 20px;
 }
 .main-nav  li a{
     color: white;
@@ -227,7 +231,86 @@ margin-top: 30px;
 height: 50px;
 width: auto;
 margin-right: 10px;
+}
+.btn-app img:hover{
+    transform: scale(1.07);
+    transition: 0.2s ease;
+}
+.box img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    
+}
+.box img:hover{
+    transform: scale(1.03);
+    transition: 0.2s ease-in-out;
+}
+.cities-feature{
+    margin-bottom: 5px ;
+}
+.icon-small{
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #e67e22;
+    font-size: 120%;
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+    margin-right: 10px;
+}
+a:link,
+a:visited{
+    color: #e67e22;
+    text-decoration: none;
 
 }
-
-
+a:hover{
+    color: #555;
+    border-bottom: 1px solid transparent;
+    transition:  border-bottom 0.5s ,color 0.3s;
+    transition: 0.5s ease-in-out;
+}
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.section-testmonials{
+      background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url("/resources/css/img/back-cust.jpg");
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+}
+blockquote{
+    padding: 2px;
+    font-style: italic;
+    line-height: 145%;
+    margin-top: 40px;
+    position: relative;
+}
+cite{
+    font-size: 90%;
+    display: flex;
+    margin-top: 25px;
+    gap: 10px;
+    align-items: center;
+}
+cite img{
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 45px;
+    object-fit: cover;
+    vertical-align: middle;
+}
+blockquote::before{
+content: '\201C';
+font-size: 500%;
+display: block;
+position: absolute;
+top: 0;
+left: -3px;
+}
